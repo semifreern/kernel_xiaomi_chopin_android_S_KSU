@@ -1,0 +1,26 @@
+In file included from ../scripts/kconfig/zconf.tab.c:2470:
+In function ‘dep_stack_insert’,
+    inlined from ‘sym_check_print_recursive’ at ../scripts/kconfig/symbol.c:1123:3,
+    inlined from ‘sym_check_deps’ at ../scripts/kconfig/symbol.c:1300:3:
+../scripts/kconfig/symbol.c:1099:19: warning: storing the address of local variable ‘cv_stack’ in ‘check_top’ [-Wdangling-pointer=]
+ 1099 |         check_top = stack;
+      |         ~~~~~~~~~~^~~~~~~
+../scripts/kconfig/symbol.c: In function ‘sym_check_deps’:
+../scripts/kconfig/symbol.c:1120:26: note: ‘cv_stack’ declared here
+ 1120 |         struct dep_stack cv_stack;
+      |                          ^~~~~~~~
+../scripts/kconfig/symbol.c:1090:4: note: ‘check_top’ declared here
+ 1090 | } *check_top;
+      |    ^~~~~~~~~
+/tmp/ccfKMHjE.s: Assembler messages:
+/tmp/ccfKMHjE.s:22769: Error: unknown pseudo-op: `.base64'
+/tmp/ccfKMHjE.s:22782: Error: unknown pseudo-op: `.base64'
+/tmp/ccfKMHjE.s:22787: Error: unknown pseudo-op: `.base64'
+/tmp/ccfKMHjE.s:22788: Error: unknown pseudo-op: `.base64'
+/tmp/ccfKMHjE.s:23207: Error: unknown pseudo-op: `.base64'
+/tmp/ccfKMHjE.s:23818: Error: unknown pseudo-op: `.base64'
+/tmp/ccfKMHjE.s:23819: Error: unknown pseudo-op: `.base64'
+make[3]: *** [scripts/Makefile.host:119: scripts/kconfig/zconf.tab.o] Error 1
+make[2]: *** [../Makefile:533: silentoldconfig] Error 2
+make[1]: *** No rule to make target 'include/config/auto.conf', needed by 'include/config/kernel.release'.  Stop.
+make: *** [Makefile:146: sub-make] Error 2

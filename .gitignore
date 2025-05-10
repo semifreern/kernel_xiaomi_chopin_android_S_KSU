@@ -54,6 +54,7 @@ modules.builtin
 /vmlinuz
 /System.map
 /Module.markers
+/out
 
 #
 # RPM spec file (make rpm-pkg)
@@ -125,3 +126,5 @@ all.config
 
 # fetched Android config fragments
 kernel/configs/android-*.cfg
+/clang
+/AnyKernel
